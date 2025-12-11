@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaadi Card Shop | Home</title>
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family:Arial;}
+    body{background:#f1f3f6;}
+
+    /* Navbar */
+    .navbar{
+      background:#2874f0;
+      padding:15px 40px;
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky; top:0; z-index:100;
+    }
+    .navbar h1{font-size:26px; font-weight:bold;}
+    .search-box input{
+      width:350px; padding:8px 12px; border:none; border-radius:3px;
+    }
+
+    /* Banner */
+    .banner{
+      background:url('https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg') center/cover;
+      height:280px;
+      display:flex; justify-content:center; align-items:center;
+      color:#fff; text-shadow:0 0 8px #000;
+      font-size:40px; font-weight:bold;
+    }
+
+    /* Product Grid */
+    .section-title{
+      font-size:26px; margin:25px 40px 10px;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:20px 40px;
+    }
+
+    .card{
+      background:#fff; padding:15px; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+      transition:.3s;
+    }
+    .card:hover{transform:scale(1.03);}
+    .card img{width:100%; height:280px; object-fit:cover; border-radius:5px;}
+
+    .price{color:green; font-weight:bold; margin:5px 0 10px;}
+
+    .btn{
+      width:100%; padding:10px; text-align:center;
+      background:#ff9f00; color:#000;
+      border-radius:4px; font-weight:bold;
+      margin-top:8px; cursor:pointer;
+    }
+    .btn.buy{background:#fb641b; color:#fff;}
+      /* Dropdown */
+    .navbar ul li:hover ul{
+      display:block;
+    }
+    .navbar ul li ul li:hover{
+      background:#eee;
+      cursor:pointer;
+    }
+      /* FIXED DROPDOWN CSS */
+    .navbar ul li ul{
+      display:none !important;
+      position:absolute;
+      background:#fff;
+      color:#000;
+      padding:10px;
+      border-radius:5px;
+      width:200px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.3);
+    }
+    .navbar ul li:hover > ul{
+      display:block !important;
+    }
+    .navbar ul li ul li:hover{
+      background:#eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="https://cdn-icons-png.flaticon.com/512/10386/10386567.png" alt="Card Logo" style="height:50px; margin-right:10px; vertical-align:middle;">
+    <h1 style="display:inline-block; vertical-align:middle; margin-right:40px;">Shaadi Card Shop</h1>
+
+    <ul style="list-style:none; display:flex; gap:30px; font-size:18px; align-items:center; color:#fff;">
+      <li><a href="#" style="color:#fff; text-decoration:none;">Home</a></li>
+
+      <!-- Categories Dropdown -->
+      <li style="position:relative; cursor:pointer;">
+        <span style="color:#fff;">Categories ▾</span>
+        <ul style="position:absolute; top:30px; left:0; background:#fff; color:#000; padding:10px 15px; border-radius:5px; width:200px; box-shadow:0 2px 8px rgba(0,0,0,0.3); display:none;">
+          <li style="padding:8px 0; border-bottom:1px solid #ddd;">Royal Wedding Cards</li>
+          <li style="padding:8px 0; border-bottom:1px solid #ddd;">Traditional Hindu Cards</li>
+          <li style="padding:8px 0; border-bottom:1px solid #ddd;">Muslim Nikah Cards</li>
+          <li style="padding:8px 0; border-bottom:1px solid #ddd;">Christian Wedding Cards</li>
+          <li style="padding:8px 0;">Budget Cards</li>
+        </ul>
+      </li>
+
+      <li><a href="#" style="color:#fff; text-decoration:none;">Contact</a></li>
+      <li><a href="#" style="color:#fff; text-decoration:none;">About</a></li>
+    </ul>
+
+    <div class="search-box" style="display:flex; gap:5px;">
+      <input type="text" placeholder="Search wedding cards...">
+      <button style="padding:8px 15px; background:#ffeb3b; border:none; border-radius:3px; cursor:pointer; font-weight:bold;">Search</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    Beautiful Wedding Cards For Your Special Day
+  </div>
+
+  <h2 class="section-title">Trending Shaadi Cards</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/6062041/pexels-photo-6062041.jpeg" alt="Card 1">
+      <h3>Royal Red Premium Card</h3>
+      <p class="price">₹35 per piece</p>
+      <div class="btn">Add to Cart</div>
+      <div class="btn buy">Buy Now</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3183729/pexels-photo-3183729.jpeg" alt="Card 2">
+      <h3>Golden Floral Design</h3>
+      <p class="price">₹29 per piece</p>
+      <div class="btn">Add to Cart</div>
+      <div class="btn buy">Buy Now</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5703681/pexels-photo-5703681.jpeg" alt="Card 3">
+      <h3>Traditional Red & Gold</h3>
+      <p class="price">₹40 per piece</p>
+      <div class="btn">Add to Cart</div>
+      <div class="btn buy">Buy Now</div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5076526/pexels-photo-5076526.jpeg" alt="Card 4">
+      <h3>Elegant Minimal White</h3>
+      <p class="price">₹22 per piece</p>
+      <div class="btn">Add to Cart</div>
+      <div class="btn buy">Buy Now</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
